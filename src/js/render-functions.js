@@ -20,11 +20,11 @@ export function createGallery(images) {
           comments,
           downloads,
         }) =>
-          `<li><a href="${largeImageURL}"><img src="${webformatURL}" alt="${tags}"></a><div>
-    <div><span>Likes</span><span>${likes}</span></div>
-    <div><span>Views</span><span>${views}</span></div>
-    <div><span>Comments</span><span>${comments}</span></div>
-    <div><span>Downloads</span><span>${downloads}</span></div>
+          `<li class="gallery__item"><a href="${largeImageURL}"><img class="gallery__image" src="${webformatURL}" alt="${tags}"></a><div class="gallery__info">
+    <div class="gallery__info-item"><span class="gallery__info-title">Likes</span><span class="gallery__info-value">${likes}</span></div>
+    <div class="gallery__info-item"><span class="gallery__info-title">Views</span><span class="gallery__info-value">${views}</span></div>
+    <div class="gallery__info-item"><span class="gallery__info-title">Comments</span><span class="gallery__info-value"><span>${comments}</span></div>
+    <div class="gallery__info-item"><span class="gallery__info-title">Downloads</span><span class="gallery__info-value"><span>${downloads}</span></div>
     </div></li>`
       )
       .join('')
